@@ -50,6 +50,7 @@ class GreeterServiceImpl final : public Greeter::Service {
                   HelloReply* reply) override {
     std::string prefix("Hello ");
     std::string suffix(" from grpc example server");
+    
     reply->set_message(prefix + request->name() + suffix);
     return Status::OK;
   }
